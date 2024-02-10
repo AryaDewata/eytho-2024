@@ -28,6 +28,9 @@
     <link rel="icon" href="/assets/img/Icons/64x64.ico" type="image/x-icon" sizes="64x64">
     <link rel="icon" href="/assets/img/Icons/128x128.ico" type="image/x-icon" sizes="128x128">
 
+    <!-- Scrollbar Cascading Style Sheets -->
+    <link rel="stylesheet" href="css/scrollbar.css">
+
     <!-- Bootstrap 5 Content Delivery Network -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -42,468 +45,685 @@
 
 </head>
 
-<body class="container-fluid">
+<body class="w-screen overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="fixed-top px-lg-5 navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
+    <div class="container-fluid">
 
-            <!-- Navigation Brand -->
-            <a class="navbar-brand" href="#">
-                <img src="/assets/img/logo-ezzy-hotel.png" alt="ezzy hotel's logo" width="68px" height="46px">
-            </a>
+        <!-- Navigation -->
+        <nav class="fixed-top px-lg-5 navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
 
-            <!-- Navigation Title -->
-            <a class="navbar-brand fw-bold" href="#"><span class="text-warning">EZZY</span> <span
-                    class="text-info">HOTEL</span></a>
+                <!-- Navigation Brand -->
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/img/logo-ezzy-hotel.png" alt="ezzy hotel's logo" width="68px" height="46px">
+                </a>
 
-            <!-- Navigation Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
-                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Navigation Title -->
+                <a class="navbar-brand fw-bold" href="#"><span class="text-warning">EZZY</span> <span
+                        class="text-info">HOTEL</span></a>
 
-            <!-- Naviation Menus -->
-            <div class="collapse navbar-collapse" id="navigation">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rooms">Rooms & Suites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+                <!-- Navigation Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    </nav>
-
-    <!-- Header -->
-    <header class="px-lg-5 pt-lg-5 h-screen row flex-lg-row-reverse align-items-center bg-cover"
-        style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url('/assets/img/Lobby/lobby-ezzy-hotel-1.jpg');">
-
-        <!-- Header Pictures -->
-        <div id="header-carousel" class="carousel slide col-10 col-sm-8 col-lg-6" data-bs-ride="carousel"
-            data-aos="fade-left">
-
-            <!-- Carousel Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="6"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="7"></button>
-            </div>
-
-            <!-- Pictures -->
-            <div class="carousel-inner">
-                <div class="carousel-item h-25 active">
-                    <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="d-block w-100 h-25"
-                        alt="ezzy hotel's lobby">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Lobby</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Lobby/lobby-ezzy-hotel-2.JPG" class="d-block w-100 h-25"
-                        alt="ezzy hotel's lobby">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Lobby</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Bar/bar-ezzy-hotel-1.jpg" class="d-block w-100 h-25" alt="ezzy hotel's bar">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Bar</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Bar/bar-ezzy-hotel-2.jpg" class="d-block w-100 h-25" alt="ezzy hotel's bar">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Bar</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Restaurant/restaurant-ezzy-hotel-1.jpg" class="d-block w-100 h-25"
-                        alt="ezzy hotel's restaurant">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Restaurant</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Restaurant/restaurant-ezzy-hotel-2.jpg" class="d-block w-100 h-25"
-                        alt="ezzy hotel's restaurant">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Restaurant</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Rooms/room-1.jpg" class="d-block w-100 h-25" alt="ezzy hotel's room">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Room</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item h-25">
-                    <img src="assets/img/Rooms/room-2.jpg" class="d-block w-100 h-25" alt="ezzy hotel's room">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ezzy Hotel's Room</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
+                <!-- Naviation Menus -->
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#rooms">Rooms & Suites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#others">Other Facilities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </nav>
 
-        </div>
+        <!-- Header -->
+        <header class="px-5 pt-5 h-screen row flex-lg-row-reverse align-items-center bg-cover"
+            style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url('/assets/img/Lobby/lobby-ezzy-hotel-1.jpg');">
 
-        <!-- Header Text -->
-        <div class="col-10 col-sm-8 col-lg-6">
-            <h1 class="display-3 fw-bold" data-aos="fade-right"><span class="text-warning">EZZY</span>
-                <span class="text-info">HOTEL</span>
-            </h1>
-            <p class="fs-4 fw-bold text-danger" data-aos="fade-right">ELIZABETH INTERNATIONAL</p>
-            <p class="text-white fw-bold" data-aos="fade-right">Jl. Hayam Wuruk No. 199, Panjer, Denpasar Selatan, Kota
-                Denpasar, Bali - Indonesia</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a type="#" class="btn btn-danger btn-lg px-4 me-md-2 fs-6" data-aos="fade-right"><i
-                        class="fas fa-edit"></i>
-                    Book Now</a>
-                <a href="#about" class="btn btn-outline-danger btn-lg px-4 fs-6" data-aos="fade-right"><i
-                        class="fas fa-book"></i> View More</a>
-            </div>
-        </div>
+            <!-- Header Pictures -->
+            <div id="header-carousel" class="carousel slide col-10 col-sm-8 col-lg-6" data-bs-ride="carousel"
+                data-aos="fade-left">
 
-    </header>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="7"></button>
+                </div>
 
-    <!-- About -->
-    <section id="about" class="container py-5 my-5 d-lg-flex d-md-block align-items-center gap-5">
-
-        <!-- Introduction Video -->
-        <video controls poster="/assets/img/Lobby/ezzy-hotel-lobby-3.jpg" class="w-50" data-aos="fade-right">
-            <source src="assets/video/ezzy-hotel.mp4" type="video/mp4">
-        </video>
-
-        <!-- Description -->
-        <div class="text-lg-start text-md-center text-sm-center">
-            <h2 class="text-danger" data-aos="fade-right">About Us</h2>
-            <p class="text-secondary" data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse minima quo
-                perferendis
-                voluptatibus, pariatur facilis deserunt praesentium iusto error! Aperiam aspernatur cupiditate tempora
-                porro culpa ad ipsam provident.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a type="#" class="btn btn-danger btn-lg px-4 me-md-2 fs-6" data-aos="fade-right"><i
-                        class="fas fa-edit"></i>
-                    Book Now</a>
-            </div>
-
-    </section>
-
-    <!-- Rooftop Wedding Chapel -->
-    <section id=" wedding-chapel"
-        class="container py-5 my-5 d-lg-flex flex-row-reverse d-md-block align-items-center gap-5">
-
-        <!-- Pictures -->
-        <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="w-50" alt="..." data-aos="fade-left">
-
-        <!-- Description -->
-        <div class="text-lg-start text-md-center text-sm-center">
-            <h2 class="text-danger" data-aos="fade-left">Rooftop Wedding Chapel</h2>
-            <p class="text-secondary" data-aos="fade-left">Get ready to explore a new life of togetherness. You will be
-                able to celebrate
-                your day with confidence.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- Rooftop Lounge and Dining -->
-    <section id="lounge-and-dining" class="container py-5 my-5 d-lg-flex d-md-block align-items-center gap-5">
-
-        <!-- Picture -->
-        <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="w-50" alt="..." data-aos="fade-right">
-
-        <!-- Description -->
-        <div class="text-lg-start text-md-center text-sm-center">
-            <h2 class="text-danger" data-aos="fade-right">Rooftop Lounge & Dining</h2>
-            <p class="text-secondary" data-aos="fade-right">An amazing spot on its rooftop with stylish lounge sittings
-                and innovative bar and
-                culinary menus along with seductive phonic infrastructure.</p>
-        </div>
-
-    </section>
-
-    <!-- Adult and Kid's Pool -->
-    <section id="lounge-and-dining"
-        class="container py-5 my-5 d-lg-flex flex-row-reverse d-md-block align-items-center gap-5">
-
-        <!-- Picture -->
-        <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="w-50" alt="..." data-aos="fade-left">
-
-        <!-- Description -->
-        <div class="text-lg-start text-md-center text-sm-center">
-            <h2 class="text-danger" data-aos="fade-left">Adult and Kid's Pool</h2>
-            <p class="text-secondary" data-aos="fade-left">A safe and entertaining environment where children can play
-                and learn at the some
-                time with the professional play ers that will take care of them.</p>
-        </div>
-
-    </section>
-
-    <section id="rooms">
-        <h2 class="text-danger text-center">Room & Suites</h2>
-        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card  " style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
+                <!-- Pictures -->
+                <div class="carousel-inner">
+                    <div class="carousel-item h-25 active">
+                        <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's lobby">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Lobby</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Lobby/lobby-ezzy-hotel-2.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's lobby">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Lobby</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Bar/bar-ezzy-hotel-1.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's bar">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Bar</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Bar/bar-ezzy-hotel-2.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's bar">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Bar</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Restaurant/restaurant-ezzy-hotel-1.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's restaurant">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Restaurant</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Restaurant/restaurant-ezzy-hotel-2.jpg" class="d-block w-100 h-25"
+                            alt="ezzy hotel's restaurant">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Restaurant</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Rooms/room-1.jpg" class="d-block w-100 h-25" alt="ezzy hotel's room">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Room</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-25">
+                        <img src="assets/img/Rooms/room-2.jpg" class="d-block w-100 h-25" alt="ezzy hotel's room">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ezzy Hotel's Room</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card-wrapper container-sm d-flex   justify-content-around">
-                        <div class="card  " style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
 
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card " style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Room 1</h5>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+
             </div>
-    </section>
 
-    <!-- FAQs -->
-    <section id="faq" class="my-4 py-lg-5">
-        <div class="container">
+            <!-- Header Text -->
+            <div class="col-10 col-sm-8 col-lg-6">
+                <h1 class="display-3 fw-bold" data-aos="fade-right"><span class="text-warning">EZZY</span>
+                    <span class="text-info">HOTEL</span>
+                </h1>
+                <p class="fs-4 fw-bold text-danger" data-aos="fade-right">ELIZABETH INTERNATIONAL</p>
+                <p class="text-white fw-bold" data-aos="fade-right">Jl. Hayam Wuruk No. 199, Panjer, Denpasar Selatan,
+                    Kota
+                    Denpasar, Bali - Indonesia</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="#" class="btn btn-danger btn-lg px-4 me-md-2 fs-6" data-aos="fade-right"><i
+                            class="fas fa-edit"></i>
+                        Book Now</a>
+                    <a href="#about" class="btn btn-outline-danger btn-lg px-4 fs-6" data-aos="fade-right"><i
+                            class="fas fa-book"></i> View More</a>
+                </div>
+            </div>
 
-            <h2 class="text-danger text-center">FAQs</h2>
+        </header>
 
-            <p class="text-secondary text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a.
+        <!-- About -->
+        <section id="about" class="container py-5 d-lg-flex d-md-block align-items-center gap-5">
+
+            <!-- Introduction Video -->
+            <video controls poster="/assets/img/Lobby/ezzy-hotel-lobby-3.jpg" class="mt-5 w-50" data-aos="fade-right">
+                <source src="assets/video/ezzy-hotel.mp4" type="video/mp4">
+            </video>
+
+            <!-- Description -->
+            <div class="text-lg-start text-md-center text-sm-center">
+                <h2 class="text-danger" data-aos="fade-right">About Us</h2>
+                <p class="text-secondary" data-aos="fade-right">Ezzy Smart Resort Hotel is an educational facility
+                    presented
+                    and managed to 5 star hotel standards by <a href="#" class="text-danger">Elizabeth
+                        International</a>.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="#" class="btn btn-danger btn-lg px-4 me-md-2 fs-6" data-aos="fade-right"><i
+                            class="fas fa-edit"></i>
+                        Book Now</a>
+                </div>
+
+        </section>
+
+        <!-- Rooftop Wedding Chapel -->
+        <section id="wedding-chapel"
+            class="container py-5 d-lg-flex flex-row-reverse d-md-block align-items-center gap-5">
+
+            <!-- Pictures -->
+            <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="mt-5 w-50" alt="..." data-aos="fade-left">
+
+            <!-- Description -->
+            <div class="text-lg-start text-md-center text-sm-center">
+                <h2 class="text-danger" data-aos="fade-left">Rooftop Wedding Chapel</h2>
+                <p class="text-secondary" data-aos="fade-left">Get ready to explore a new life of togetherness. You will
+                    be
+                    able to celebrate
+                    your day with confidence.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Rooftop Lounge and Dining -->
+        <section id="lounge-and-dining" class="container py-5 d-lg-flex d-md-block align-items-center gap-5">
+
+            <!-- Picture -->
+            <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="mt-5 w-50" alt="..." data-aos="fade-right">
+
+            <!-- Description -->
+            <div class="text-lg-start text-md-center text-sm-center">
+                <h2 class="text-danger" data-aos="fade-right">Rooftop Lounge & Dining</h2>
+                <p class="text-secondary" data-aos="fade-right">An amazing spot on its rooftop with stylish lounge
+                    sittings
+                    and innovative bar and
+                    culinary menus along with seductive phonic infrastructure.</p>
+            </div>
+
+        </section>
+
+        <!-- Adult and Kid's Pool -->
+        <section id="lounge-and-dining"
+            class="container py-5 d-lg-flex flex-row-reverse d-md-block align-items-center gap-5">
+
+            <!-- Picture -->
+            <img src="assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="mt-5 w-50" alt="..." data-aos="fade-left">
+
+            <!-- Description -->
+            <div class="text-lg-start text-md-center text-sm-center">
+                <h2 class="text-danger" data-aos="fade-left">Adult and Kid's Pool</h2>
+                <p class="text-secondary" data-aos="fade-left">A safe and entertaining environment where children can
+                    play
+                    and learn at the some
+                    time with the professional play ers that will take care of them.</p>
+            </div>
+
+        </section>
+
+        <section id="rooms" class="container py-5">
+            <h2 class="mt-5 text-danger text-center" data-aos="fade-up">Room & Suites</h2>
+            <p class="text-secondary text-center" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Explicabo, a.
             </p>
+            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                data-aos="fade-up">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-wrapper container-sm d-flex  justify-content-around">
+                            <div class="card  " style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
 
-            <!-- Faq List -->
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Sit unde
-                            repellendus praesentium laudantium accusamus ipsum dicta ipsam vero!</div>
-                    </div>
-                </div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam repellat adipisci amet.
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Velit
-                            incidunt ducimus et.</div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore cum excepturi tenetur
-                            distinctio voluptas harum eum?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Amet
-                            sapiente autem odit quas, quo alias, voluptatem repellat incidunt fugiat, debitis ullam.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="carousel-item">
+                        <div class="card-wrapper container-sm d-flex   justify-content-around">
+                            <div class="card  " style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false"
-                            aria-controls="flush-collapseFour">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, unde voluptas.
-                        </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laborum illum delectus odit veniam in explicabo natus animi repudiandae.</div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-wrapper container-sm d-flex  justify-content-around">
+                            <div class="card " style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="assets/img/Rooms/room-3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 1</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev" data-aos="fade-right">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next" data-aos="fade-left">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faq" class="py-5">
+            <div class="container mt-5">
+
+                <h2 class="text-danger text-center" data-aos="fade-up">FAQs</h2>
+
+                <p class="text-secondary text-center" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                    Explicabo, a.
+                </p>
+
+                <!-- Faq List -->
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                    <div class="accordion-item" data-aos="fade-up">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur,
+                                adipisicing
+                                elit. Sit unde
+                                repellendus praesentium laudantium accusamus ipsum dicta ipsam vero!</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-aos="fade-up">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam repellat adipisci amet.
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur,
+                                adipisicing
+                                elit. Velit
+                                incidunt ducimus et.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-aos="fade-up">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore cum excepturi tenetur
+                                distinctio voluptas harum eum?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Amet
+                                sapiente autem odit quas, quo alias, voluptatem repellat incidunt fugiat, debitis ullam.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-aos="fade-up">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, unde voluptas.
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-secondary">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Laborum illum delectus odit veniam in explicabo natus animi repudiandae.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-5">
+            <div class="container mt-5">
+
+                <h2 class="text-danger text-center" data-aos="fade-up">Gallery</h2>
+
+                <p class="text-secondary text-center" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                    Explicabo, a.
+                </p>
+                <!-- Gallery -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="/assets/img/Lobby/lobby-ezzy-hotel-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Boat on Calm Water" data-aos="fade-up">
+
+                        <img src="/assets/img/Bar/bar-ezzy-hotel-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Wintry Mountain Landscape" data-aos="fade-up">
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="/assets/img/Rooms/room-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Mountains in the Clouds" data-aos="fade-up">
+
+                        <img src="/assets/img/Restaurant/restaurant-ezzy-hotel-1.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" data-aos="fade-up">
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="/assets/img/Restaurant/restaurant-ezzy-hotel-2.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" data-aos="fade-up">
+
+                        <img src="/assets/img/Bar/bar-ezzy-hotel-2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Yosemite National Park" data-aos="fade-up">
                     </div>
                 </div>
+                <!-- Gallery -->
+        </section>
+
+        <!-- Others -->
+        <section id="others" class="py-5">
+            <div class="container mt-5">
+
+                <h2 class="text-danger text-center">Other Facilities & Accomodation</h2>
+
+                <p class="text-secondary text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Explicabo, a.
+                </p>
+                <!-- Gallery -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="/assets/img/Restaurant/restaurant-ezzy-hotel-1.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" data-aos="fade-up">
+
+                        <img src="/assets/img/Bar/bar-ezzy-hotel-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Wintry Mountain Landscape" data-aos="fade-up">
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="/assets/img/Bar/bar-ezzy-hotel-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Mountains in the Clouds" data-aos="fade-up">
+
+                        <img src="/assets/img/Restaurant/restaurant-ezzy-hotel-1.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" data-aos="fade-up">
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="/assets/img/Restaurant/restaurant-ezzy-hotel-2.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" data-aos="fade-up">
+
+                        <img src="/assets/img/Bar/bar-ezzy-hotel-2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Yosemite National Park" data-aos="fade-up">
+                    </div>
+                </div>
+                <!-- Gallery -->
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-5">
+            <div class="container my-5">
+
+                <!-- Title -->
+                <h2 class="text-danger text-center" data-aos="fade-up">Contact Us</h2>
+                <p class="text-secondary text-center" data-aos="fade-up">Contact us to get more information</p>
+
+                <!-- Social Media -->
+                <div class="mt-2 mb-4 d-flex justify-content-evenly fs-3">
+                    <a href="https://www.instagram.com/ezzyhotel/" target="_blank" class="text-danger"
+                        data-aos="fade-up"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ElizabethInternational/" target="_blank" class="text-danger"
+                        data-aos="fade-up"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-danger" data-aos="fade-up"><i class="fas fa-earth"></i></a>
+                    <a href="https://www.youtube.com/@EzzyTV/" target="_blank" class="text-danger" data-aos="fade-up"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="mailto://ezzycity@kampuselizabeth.com" class="text-danger" data-aos="fade-up"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+
+                <!-- Contact Box -->
+                <div
+                    class="overflow-hidden d-flex flex-lg-row flex-md-row flex-sm-column flex-column gap-3 rounded shadow">
+
+                    <!-- Google Maps -->
+                    <div class="col-md-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6297.3447772643885!2d115.23742303274027!3d-8.662335217635324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x49f58138c57f07a3%3A0xdf820adb3ce4509!2sEzzy%20Hotel!5e0!3m2!1sen!2sid!4v1707534446432!5m2!1sen!2sid"
+                            class="w-100 h-100" data-aos="fade-up"></iframe>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form action="#contact" method="get" class="p-3 row gap-3 col-md-6">
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="name" class="text-secondary" data-aos="fade-up">Name<span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" autocomplete="off" required
+                                data-aos="fade-up">
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="email" class="text-secondary" data-aos="fade-up">Email Address<span
+                                    class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" autocomplete="off" required
+                                data-aos="fade-up">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message" class="text-secondary" data-aos="fade-up">Your Message<span
+                                    class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" autocomplete="off" required
+                                data-aos="fade-up"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <button class="btn bg-danger text-white fs-6" type="submit" name="send-message"
+                                data-aos="fade-up">Send
+                                Message <i class=" px-1 fas fa-paper-plane"></i></button>
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 
     <!-- Footer -->
-    <footer class="p-4 pb-1 bg-dark">
+    <footer class="py-3 pb-1 px-5 bg-dark">
 
+        <!-- Footer Content -->
         <div class="row justify-content-between">
 
-            <div class="col-md-5 mb-3">
-                <img src="assets/img/logo-ezzy-hotel.png" alt="logo ezzy smart resort hotel bali" class="w-25">
+            <!-- Site's Description -->
+            <div class="col-md-5 mb-3 text-sm-start">
+                <img src="/assets/img/logo-ezzy-hotel.png" alt="logo ezzy smart resort hotel bali" class="w-25">
                 <q class="mt-2 mb-3 d-block text-secondary">Where You, Health, Lifestyle Begin. <br> Have A Great
                     Stay!</q>
-                <address class="text-secondary"><i class="fas fa-location-dot text-secondary"></i> Jln. Hayam Wuruk No.
-                    199, Denpasar, Bali</address>
-                <p class="text-secondary"><i class="fas fa-phone text-secondary"></i> Telp. (0361) 474 8590</p>
+                <address class="text-secondary"><i class="fas fa-location-dot text-secondary"></i> Jl. Hayam Wuruk
+                    No.
+                    199, Panjer, Denpasar Selatan, Kota Denpasar, Bali - Indonesia</address>
+                <p class="text-secondary"><i class="fas fa-phone text-secondary"></i> (0361) 474 8590</p>
             </div>
 
-            <!-- Section -->
+            <!-- Sections -->
             <div class="col-6 col-md-2 mb-3">
-                <p class="text-white">Section</p>
+                <p class="text-secondary text-sm-start fw-bold">Sections</p>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-muted">About</a></li>
-                    <li class="nav-item mb-2"><a href="#rooms" class="nav-link p-0 text-muted">Rooms & Suites</a></li>
+                    <li class="nav-item mb-2"><a href="#"
+                            class="nav-link p-0 text-muted text-decoration-underline">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#about"
+                            class="nav-link p-0 text-muted text-decoration-underline">About</a>
                     </li>
-                    <li class="nav-item mb-2"><a href="#faq" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="#rooms"
+                            class="nav-link p-0 text-muted text-decoration-underline">Rooms &
+                            Suites</a></li>
+                    <li class="nav-item mb-2"><a href="#faq"
+                            class="nav-link p-0 text-muted text-decoration-underline">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#gallery"
+                            class="nav-link p-0 text-muted text-decoration-underline">Gallery</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#others"
+                            class="nav-link p-0 text-muted text-decoration-underline">Other
+                            Facilities</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#contact"
+                            class="nav-link p-0 text-muted text-decoration-underline">Contact</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Other Facilities -->
             <div class="col-6 col-md-2 mb-3">
-                <p class="text-white">Other Facilities</p>
+                <p class="text-secondary text-sm-start fw-bold">Other Facilities</p>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Restaurant</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Meeting Room</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cafe & Bar</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Ezzy
+                            Restaurant</a>
                     </li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fitness Center</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kid's Club</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boutique</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Ezzy
+                            Meeting
+                            Room</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Cafe
+                            & Bar</a>
+                    </li>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Ezzy
+                            Fitness
+                            Center</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Ezzy
+                            Kid's Club</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted text-decoration-underline">Ezzy
+                            Boutique</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Terms & Conditions -->
             <div class="col-6 col-md-2 mb-3">
-                <p class="text-white">Terms & Condition</p>
+                <p class="text-secondary text-sm-start fw-bold">Terms & Conditions</p>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">License</a></li>
+                    <li class="nav-item mb-2"><a href="#"
+                            class="nav-link p-0 text-muted text-decoration-underline">Privacy
+                            Policy</a></li>
+                    <li class="nav-item mb-2"><a href="#"
+                            class="nav-link p-0 text-muted text-decoration-underline">License</a>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
         <!-- Copyright Text -->
-        <div class="pt-3 border-secondary border-top text-white">
-            <p>&copy; 2024. Ezzy Smart Resort Hotel Bali. All Rights Reserved.
+        <div class="pt-3 border-secondary border-top text-secondary text-sm-start fw-bold">
+            <p>&copy; 2024. <a href="#" class="text-secondary">Ezzy Smart Resort Hotel Bali</a>. All Rights Reserved.
             </p>
         </div>
 
